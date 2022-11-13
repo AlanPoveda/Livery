@@ -9,6 +9,8 @@ defmodule LiveryWeb.Router do
     pipe_through :api
 
     get "/:id", WelcomeController, :index
+
+    resources "users", UserController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development

@@ -10,7 +10,7 @@ import Config
 config :livery,
   ecto_repos: [Livery.Repo]
 
-config :livery, Live.Repo, migration_primary_key: [type: :binary_id], migration_foreing_key: [type: :binary_id]
+config :livery, Livery.Repo, migration_primary_key: [type: :binary_id], migration_foreing_key: [type: :binary_id]
 
 # Configures the endpoint
 config :livery, LiveryWeb.Endpoint,
