@@ -1,4 +1,4 @@
-defmodule LiveryWeb.UsersView do
+defmodule LiveryWeb.UserView do
   use LiveryWeb, :view
 
   alias LiveryWeb.User
