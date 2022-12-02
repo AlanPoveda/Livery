@@ -46,7 +46,9 @@ defmodule Livery.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:uuid, "~> 1.1"},
-      {:pbkdf2_elixir, "~> 1.3"}
+      {:pbkdf2_elixir, "~> 1.3"},
+      {:tesla, "~> 1.4"},
+      {:hackney, "~> 1.17"}
     ]
   end
 
