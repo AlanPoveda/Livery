@@ -1,5 +1,5 @@
 defmodule Livery do
-  alias Livery.Users.Create, as: CreateUser
+  alias Livery.Users.Create, as: UserCreate
   @moduledoc """
   Livery keeps the contexts that define your domain
   and business logic.
