@@ -1,7 +1,7 @@
 defmodule LiveryWeb.UsersView do
   use LiveryWeb, :view
 
-  import LiveryWeb.User
+  alias LiveryWeb.User
 
 
   def render("created.json", %{user: %User{} = user}) do
