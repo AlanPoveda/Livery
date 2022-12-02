@@ -10,7 +10,7 @@ defmodule LiveryWeb.Router do
 
     get "/:id", WelcomeController, :index
 
-    resources "users", UserController, except: [:new, :edit]
+    resources "/users", UserController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
