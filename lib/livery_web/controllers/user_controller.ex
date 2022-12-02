@@ -4,7 +4,7 @@ defmodule LiveryWeb.UserController do
   alias LiveryWeb.User
 
   def create(conn, params) do
-    with {:ok, %User{user: user}} <- Livery.user_create(params) do
+    with {:ok, %User{} = user} <- Livery.user_create(params) do
       conn
       |> put_status(:created)
       |> render("created.json", user: user) 
