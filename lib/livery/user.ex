@@ -1,10 +1,13 @@
 defmodule LiveryWeb.User do
   use Ecto.Schema
   import Ecto.Changeset
+  import Jason
 
   @primary_key {:id, :binary_id, autogenerate: :true}
 
   @required_params [:cpf, :name, :cpf, :email, :password, :age, :address, :cep]
+
+  @derive {Jason.Encoder , only: [:id, :name, :address, :cpf, :cep]}
 
   schema "users" do
     field :age, :integer

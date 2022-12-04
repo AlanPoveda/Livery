@@ -7,10 +7,7 @@ defmodule LiveryWeb.UserView do
   def render("created.json", %{user: %User{} = user}) do
     %{
       message:  "User created",
-      user: %{
-        id: user.id,
-        name: user.name
-      }
+      user: user
     } 
   end 
 end
