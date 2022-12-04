@@ -4,7 +4,8 @@ defmodule LiveryWeb.User do
 
   @primary_key {:id, :binary_id, autogenerate: :true}
 
-  @required_params [:cpf, :name, :cpf, :email, :password]
+  @required_params [:cpf, :name, :cpf, :email, :password, :age, :address, :cep]
+
   schema "users" do
     field :age, :integer
     field :name, :string
