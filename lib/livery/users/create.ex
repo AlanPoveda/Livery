@@ -9,7 +9,7 @@ defmodule Livery.Users.Create do
     |> handle_insert()
   end
 
-  defp handle_insert({:ok, %User{} = result}), do: result
+  defp handle_insert({:ok, %User{}} = result), do: result
 
   defp handle_insert({:error, result}) do
     {:error, %{status: :bad_request, result: result}}
