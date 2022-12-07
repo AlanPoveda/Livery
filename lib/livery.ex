@@ -1,5 +1,6 @@
 defmodule Livery do
   alias Livery.Users.Create, as: UserCreate
+  alias Livery.Users.GetUser, as: GetUser
   @moduledoc """
   Livery keeps the contexts that define your domain
   and business logic.
@@ -9,5 +10,6 @@ defmodule Livery do
   """
 
   defdelegate user_create(params), to: UserCreate, as: :call
+  defdelegate by_id(id), to: GetUser, as: :by_id
   
 end
