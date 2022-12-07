@@ -3,17 +3,18 @@ defmodule Livery.Users.Delete do
   alias Ecto.UUID
   
   alias Livery.Repo
+  alias Livery.Error
 
   def call(id) do
     case UUID.cast(id) do
-      :error -> {:error, %{status: :bad_request, result: "Invalid ID"}}
+      :error -> {:error, Error.invalid_uuid()}
       {:ok, uuid} -> delete(uuid)
     end
   end
 
   defp delete(uuid) do
     case Repo.get(User, uuid) do
-      nil -> {:error, %{status: :not_found, result: "User not found"}}
+      nil -> {:error, Error.user_not_found()}
       user -> Repo.delete(user)
     end
   end
